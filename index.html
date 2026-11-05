@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cotiza tu seguro de decesos en 1 minuto</title>
+<style>
+:root{--bg:#f4f7f8;--card:#fff;--tx:#14282e;--mu:#5d7279;--pr:#0f766e;--pr2:#0b5a54;--bd:#d9e3e6;--ac:#fff3d6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a1d;--card:#16262a;--tx:#e8f1f2;--mu:#93a8ad;--pr:#2bb3a6;--pr2:#5fd0c5;--bd:#27403f;--ac:#3a3217}}
+:root[data-theme="dark"]{--bg:#0e1a1d;--card:#16262a;--tx:#e8f1f2;--mu:#93a8ad;--pr:#2bb3a6;--pr2:#5fd0c5;--bd:#27403f;--ac:#3a3217}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:560px;margin:0 auto;padding:20px 16px 110px}
+h1{font-size:26px;line-height:1.2;margin:8px 0}h2{font-size:20px;margin:0 0 4px}
+.sub{color:var(--mu);margin:0 0 16px}
+.bar{height:6px;background:var(--bd);border-radius:9px;margin:14px 0}.bar i{display:block;height:100%;width:0;background:var(--pr);border-radius:9px;transition:.3s}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px;margin-bottom:14px}
+label{display:block;font-weight:600;margin:12px 0 6px}
+input[type=number],input[type=email],input[type=text],input[type=tel],input[type=date],select{width:100%;padding:12px;font-size:16px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx)}
+input[type=range]{width:100%;accent-color:var(--pr)}
+.row{display:flex;gap:10px;align-items:center}.row>*{flex:1}
+.cnt{display:flex;align-items:center;justify-content:center;gap:18px;margin:6px 0}
+.cnt button{width:46px;height:46px;border-radius:50%;border:1px solid var(--pr);background:none;color:var(--pr);font-size:24px}
+.cnt b{font-size:30px;min-width:36px;text-align:center}
+.btn{display:block;width:100%;padding:15px;border:0;border-radius:12px;background:var(--pr);color:#fff;font-size:17px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer;margin-top:10px}
+.btn.s{background:none;border:1px solid var(--pr);color:var(--pr)}
+.big{font-size:34px;font-weight:800;text-align:center;margin:8px 0}
+.opt{border:1px solid var(--bd);border-radius:12px;padding:12px;margin-bottom:10px}
+.opt>label.t{display:flex;gap:10px;align-items:flex-start;margin:0;font-weight:600}
+.opt input[type=checkbox]{width:20px;height:20px;margin-top:3px;accent-color:var(--pr)}
+.opt small{display:block;color:var(--mu);font-weight:400}.opt .in{margin-top:8px;display:none}.opt.on .in{display:block}.opt.on{border-color:var(--pr)}
+ul.ck{list-style:none;padding:0;margin:8px 0}ul.ck li{padding:3px 0 3px 24px;position:relative;font-size:15px}ul.ck li:before{content:"✓";position:absolute;left:0;color:var(--pr);font-weight:800}
+table{width:100%;border-collapse:collapse;font-size:15px}td{padding:6px 0;border-bottom:1px solid var(--bd)}td:last-child{text-align:right;white-space:nowrap}
+.promo{background:var(--ac);border-radius:12px;padding:14px}
+.fine{font-size:12px;color:var(--mu)}.hide{display:none}.err{color:#c0392b;font-size:14px;min-height:18px}
+.old{text-decoration:line-through;color:var(--mu);font-size:20px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:flex;align-items:center;gap:6px;border:1px solid var(--bd);border-radius:20px;padding:8px 12px;font-weight:400;margin:0;font-size:15px}.chip input{accent-color:var(--pr)}
+.dto{background:linear-gradient(135deg,#d97706,#c2410c);color:#fff;border-radius:14px;padding:14px;text-align:center;margin:4px 0 14px;box-shadow:0 4px 14px rgba(194,65,12,.35);animation:pl 2s ease-in-out infinite}.dt1{font-size:26px;font-weight:900;letter-spacing:.5px}.dt2{font-size:15px}.dt3{display:inline-block;margin-top:8px;background:rgba(0,0,0,.25);border-radius:20px;padding:5px 12px;font-size:14px;font-weight:700}@keyframes pl{50%{transform:scale(1.02)}}@media(prefers-reduced-motion:reduce){.dto{animation:none}}
+.fix{position:fixed;left:0;right:0;bottom:0;background:var(--card);border-top:1px solid var(--bd);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));text-align:center;font-size:14px;color:var(--mu)}
+.fix b{color:var(--tx);font-size:18px}
+</style></head><body><main>
+<h1>Protege a tu familia desde unos pocos euros al mes</h1>
+<p class="sub">Calcula en 4 pasos el precio aproximado de tu seguro de decesos. Sin compromiso.</p>
+<div class="bar"><i id="pb"></i></div>
+
+<section id="s0" class="card"><h2>Antes de empezar</h2><p class="sub">Unas preguntas rápidas para ajustar tu cotización.</p>
+<label for="hs">¿Ya tienes un seguro de decesos?</label><select id="hs" onchange="ex()"><option value="">Selecciona…</option><option value="no">No tengo ningún seguro</option><option value="si">Sí, ya tengo uno</option></select>
+<div id="hy" class="hide"><label>¿En qué compañía lo tienes? (opcional)</label><div class="chips"><label class="chip"><input type="radio" name="cia" value="Santalucía"> Santalucía</label><label class="chip"><input type="radio" name="cia" value="Ocaso"> Ocaso</label><label class="chip"><input type="radio" name="cia" value="Mapfre"> Mapfre</label><label class="chip"><input type="radio" name="cia" value="Catalana Occidente"> Catalana Occidente</label><label class="chip"><input type="radio" name="cia" value="NorteHispana"> NorteHispana</label><label class="chip"><input type="radio" name="cia" value="Caser"> Caser</label><label class="chip"><input type="radio" name="cia" value="Generali"> Generali</label><label class="chip"><input type="radio" name="cia" value="Reale"> Reale</label><label class="chip"><input type="radio" name="cia" value="Pelayo"> Pelayo</label><label class="chip"><input type="radio" name="cia" value="Previsora General"> Previsora General</label></div><input type="text" id="co" placeholder="Otra compañía (opcional)" style="margin-top:8px">
+
+
+</div>
+
+
+<div class="err" id="e0"></div><button class="btn" onclick="start()">Calcular mi seguro</button></section>
+
+<section id="s5" class="card hide"><h2 id="ph"></h2><p class="sub" id="ps"></p><div class="row"><input type="number" id="pg" inputmode="decimal" min="0" placeholder="€"><select id="pp"><option value="m">al mes</option><option value="a">al año</option></select></div><div class="err" id="e5"></div><button class="btn" onclick="start2()">Continuar</button><button class="btn s" onclick="go(0)">Atrás</button></section>
+
+<section id="s1" class="card hide"><h2>1. ¿A quién quieres asegurar?</h2><p class="sub">Indica cuántas personas y escribe sus fechas de nacimiento solo con números (ej. 15031985). Usamos la edad actuarial: si cumples años en los próximos 6 meses, se calcula con la edad que vas a cumplir.</p>
+<div class="cnt"><button type="button" onclick="chg(-1)">−</button><b id="n">1</b><button type="button" onclick="chg(1)">+</button></div>
+<div id="ages"></div><div class="err" id="e1"></div>
+<button class="btn" onclick="go(2)">Continuar</button></section>
+
+<section id="s2" class="card hide"><h2>2. Qué incluye tu seguro</h2><p class="sub">Servicio funerario completo, nicho o sepultura y un capital regulador, todo en una sola póliza.</p>
+
+<input type="hidden" id="cap" value="4400">
+
+<ul class="ck"><li>Servicio de defunción completo, sea cual sea la causa</li><li>Traslado nacional e internacional</li><li>Gestoría de fallecimiento y asesoría jurídica telefónica</li><li>Orientación médica 24h, bienestar y salud</li><li>Mi testamento y legado digital</li></ul>
+<button class="btn" onclick="go(3)">Continuar</button><button class="btn s" onclick="go(1)">Atrás</button></section>
+
+<section id="s3" class="card hide"><h2>3. Pensemos en el «¿y si…?»</h2><p class="sub">Activa solo lo que te interese. Si no, sigue adelante.</p><p class="fine" id="nx"></p>
+<div class="opt" id="oh"><label class="t"><input type="checkbox" id="h" onchange="tog('oh',this)"><span>🏥 ¿Te gustaría cobrar dinero por cada día que estés ingresado?<small>Subsidio diario sin reconocimiento médico, por cualquier causa (hasta 90 días/año). Actívalo si te interesa.</small><small id="nh"></small></span></label>
+<div class="in"><label>Subsidio diario</label><select id="sub"></select><p class="fine">Disponible de 0 a 64 años. Carencia de 6 meses.</p></div></div>
+<div class="opt" id="oa"><label class="t"><input type="checkbox" id="a" onchange="tog('oa',this)"><span>⚠️ ¿Y si un accidente cambiara tu vida de un día para otro?<small>Indemnización inmediata por fallecimiento o invalidez por accidente, en la vida privada o profesional.</small><small id="na"></small></span></label>
+<div class="in"><label>Cobertura</label><select id="at"><option value="MI">Muerte + Invalidez</option><option value="M">Solo muerte</option><option value="I">Solo invalidez</option></select>
+<label>Capital</label><select id="ac"></select></div></div>
+<div class="opt" id="oe"><label class="t"><input type="checkbox" id="e" onchange="tog('oe',this)"><span>🩺 ¿Y si algún día necesitaras una cirugía compleja o un tratamiento oncológico?<small>Cobertura de hasta 30.000 € por tratamiento, en habitación individual. Se activa junto con la hospitalización.</small><small id="ne"></small></span></label></div>
+<div class="opt" id="op"><label class="t"><input type="checkbox" id="pt" onchange="tog('op',this)"><span>🐾 ¿Y si tu mascota también estuviera protegida?<small>Recogida e incineración con certificado, traslado y consultas gratuitas al veterinario (mascotas de 6 meses a 10 años, sin exclusión por razas). Es opcional y tiene un coste adicional que se confirmará en tu presupuesto oficial.</small></span></label></div>
+<button class="btn" onclick="go(4)">Ver mi precio</button><button class="btn s" onclick="go(2)">Atrás</button></section>
+
+<section id="s4" class="hide">
+<div class="card hide" id="blk"><h2>Hablemos de tu seguro</h2><p>No podemos darte el precio en este momento. Si lo deseas, agenda una llamada, llámanos o escríbenos y un asesor te ayudará a encontrar la mejor opción para ti.</p><button class="btn" onclick="pick('call')">📞 Agendar una llamada</button><a class="btn" id="tl2">📱 Llamar ahora</a><button class="btn s" onclick="pick('wa')">💬 Escribir por WhatsApp</button></div>
+<div class="card" id="quote"><h2>Tu precio aproximado</h2><div class="big" id="tot"></div><p class="fine" style="text-align:center;margin:0">al mes, impuestos incluidos (precio orientativo)</p>
+<table id="det" style="margin-top:12px"></table><p id="mq" class="fine hide" style="margin:8px 0 0">🐾 <b>Mascotas:</b> garantía opcional no incluida en este precio. Su coste adicional se confirmará en el presupuesto oficial.</p><p id="cmp" class="promo hide" style="margin:10px 0 0;font-size:15px"></p><p class="fine" style="margin:10px 0 0"><b>Aviso:</b> los precios mostrados son aproximados y orientativos. El importe final y las condiciones se confirmarán en el presupuesto oficial, tras la valoración de la aseguradora.</p></div>
+<div class="card" id="choice"><h2>¿Cómo quieres continuar?</h2><div class="dto"><div class="dt1">🎁 10% DE DESCUENTO</div><div class="dt2">En cualquiera de las opciones</div><div class="dt3">⏳ Válido solo una semana · hasta el <span id="vd"></span></div></div><p class="sub">Elige lo que mejor te venga.</p><label for="vg">¿Cuándo quieres que empiece la vigencia de tu seguro?</label><select id="vg" onchange="$('vf').classList.toggle('hide',this.value!='f')"><option value="Lo antes posible">Lo antes posible</option><option value="En 15 días">En 15 días</option><option value="El mes que viene">El mes que viene</option><option value="f">Elegir una fecha</option></select><input type="date" id="vf" class="hide" style="margin-top:8px"><div class="err" id="ev"></div><button class="btn" onclick="pick('call')">📞 Agendar una llamada</button><button class="btn" onclick="pick('wa')">💬 Cerrar la contratación por WhatsApp</button><button class="btn" onclick="pick('mail')">📄 Recibir presupuesto oficial por correo</button><button class="btn s" onclick="pick('look')">🤔 Aún estoy mirando</button></div>
+<div class="card promo hide" id="lead"><h2 id="lh"></h2><label for="nm">Tu nombre</label><input type="text" id="nm" autocomplete="name"><div id="fm" class="hide"><label for="rc">¿Dónde quieres recibir tu presupuesto formal?</label><select id="rc" onchange="rcg()"><option value="c">Por correo electrónico</option><option value="w">Por WhatsApp</option></select><label for="dn">Número de DNI o NIE</label><input type="text" id="dn" autocomplete="off" maxlength="12" placeholder="12345678Z o X1234567L"><p class="fine" style="margin:6px 0 0">Usamos tu DNI/NIE solo para preparar tu presupuesto oficial.</p></div><div id="fc"><label for="tl">Teléfono</label><input type="tel" id="tl" autocomplete="tel"><div id="fd"><label>¿Cuándo te viene bien la llamada?</label><div class="row"><input type="date" id="cd"><select id="ch"><option>Mañana (9–13 h)</option><option>Tarde (15–19 h)</option></select></div></div></div>
+<label for="em">Tu correo electrónico</label><input type="email" id="em" placeholder="nombre@correo.com" autocomplete="email">
+<label style="display:flex;gap:8px;font-weight:400;font-size:13px;align-items:flex-start"><input type="checkbox" id="rg" style="margin-top:3px"> Acepto el tratamiento de mis datos para recibir esta cotización y que me contacten. Puedo retirar mi consentimiento cuando quiera.</label>
+<div class="err" id="e4"></div><button class="btn" id="sb" onclick="sendLead()">Enviar</button></div>
+<div class="card hide" id="done"><h2 id="dh"></h2><div class="big" id="dp"><span class="old" id="old"></span> <span id="neo"></span></div><p class="fine" id="dq" style="text-align:center;margin:0">al mes con el 10% de descuento, válido hasta el <span id="vd2"></span>. Precio aproximado: el presupuesto oficial confirmará el importe final.</p><p class="fine" id="dm" style="text-align:center"></p><p class="fine" id="dv" style="text-align:center"></p>
+<a class="btn" id="wa" target="_blank" rel="noopener">Escribir por WhatsApp</a><a class="btn s" id="ml">Confirmar por correo</a></div>
+<button class="btn s" onclick="go(3)">Modificar mi cotización</button>
+<p class="fine">Precio orientativo, sujeto a contratación y aceptación por la aseguradora. No constituye oferta vinculante. Carencias y condiciones según póliza. Descuento promocional sujeto a condiciones.</p></section>
+</main>
+<div class="fix" id="fx">Desde <b id="fv">—</b> / mes (aprox.)</div>
+<script>
+// ===== Configuración (edítala) =====
+var CFG={whatsapp:"34624358233",phone:"34613308912",email:"monicaasesoriaseguros@gmail.com",endpoint:"",dto:0.10};
+// Tarifa D8: prima mensual por 10.000 € de capital, por tramo de edad (lineal con el capital)
+var R=[4.43,6.27,6.49,6.38,6.92,8.54,11.57,17.30,26.06,38.83,57.00,73.11,77.44,82.09,87.39];
+var ACC={M:[9.13,12.66,18.87,25.32],I:[7.72,11.24,16.86,22.48],MI:[12.63,18.26,27.39,36.52]}; // a 60.000 €, 1–4 personas
+var SUBS=[6,10,12,15,18,20,25,30,35,40],ACCS=[3000,6000,10000,15000,20000,30000,40000,50000,60000];
+var S={n:1,ages:[""],dob:[""],dp:[["","",""]],step:1},$=function(i){return document.getElementById(i)};
+var eur=function(x){return x.toLocaleString("es-ES",{minimumFractionDigits:2,maximumFractionDigits:2})+" €"};
+function elig(){var A=S.ages,n=A.length,c=function(f){return A.filter(f).length},h=c(function(a){return a<=64}),e=c(function(a){return a<=60}),ad=c(function(a){return a>=14&&a<=64}),sh=function(id,ok,w){$(id).classList.toggle("hide",!ok);if(!ok&&$(w).checked){$(w).checked=false;$(id).classList.remove("on")}};sh("oh",h>0,"h");sh("oa",h>0,"a");sh("oe",e>0&&h>0,"e");$("nh").textContent=h<n?"Disponible para "+h+" de "+n+" asegurados (hasta 64 años).":"Hasta los 64 años.";$("na").textContent="Muerte por accidente desde los 14 años; invalidez desde 0. Máximo 64 años."+(ad<h?" Los menores de 14 solo tendrían invalidez.":"");$("ne").textContent=e<n?"Disponible para "+e+" de "+n+" asegurados (hasta 60 años).":"Hasta los 60 años.";$("nx").textContent=h==0?"Por la edad de los asegurados no hay garantías opcionales disponibles. Puedes continuar con tu cotización.":""}
+function rcg(){var w=MODE=="mail"&&$("rc").value=="w",c=MODE=="call";$("fc").classList.toggle("hide",!(c||w));$("fd").classList.toggle("hide",!c);$("fm").classList.toggle("hide",MODE!="mail")}
+function vig(){var s=$("vg").value;return s=="f"?($("vf").value||"fecha por confirmar"):s}
+function ex(){$("hy").classList.toggle("hide",$("hs").value!="si")}
+function chk(n){return[].slice.call(document.querySelectorAll('input[name="'+n+'"]:checked')).map(function(x){return x.value})}
+function start(){var h=$("hs").value;if(!h){$("e0").textContent="Selecciona una opción para continuar.";return}$("e0").textContent="";$("ph").textContent=h=="si"?"¿Cuánto pagas actualmente por tu seguro?":"¿Cuánto crees que deberías pagar por un seguro de decesos?";$("ps").textContent=h=="si"?"Indica el importe de tu póliza actual.":"Una cifra aproximada nos ayuda a ajustar tu cotización.";go(5)}
+function start2(){if(!(+$("pg").value>0)){$("e5").textContent="Indica un importe mayor que 0.";return}$("e5").textContent="";go(1)}
+function curM(){var p=$("hs").value?+$("pg").value:0;if(!(p>0))return 0;return $("pp").value=="a"?p/12:p}
+function pre(){var o=["Seguro de decesos actual: "+($("hs").value=="si"?"sí":"no")];if($("hs").value=="si"){var cp=chk("cia").concat($("co").value.trim()?[$("co").value.trim()]:[]);if(cp.length)o.push("Compañía: "+cp.join(", "));if($("pg").value)o.push("Paga: "+$("pg").value+" € "+($("pp").value=="a"?"al año":"al mes"));}if($("hs").value=="no"&&$("pg").value)o.push("Cree que debería pagar: "+$("pg").value+" € "+($("pp").value=="a"?"al año":"al mes"));return o.join("\n")}
+function vence(){var d=new Date();d.setDate(d.getDate()+7);return d.toLocaleDateString("es-ES",{day:"numeric",month:"long",year:"numeric"})}
+function setDob(i,v){S.dob[i]=v;S.ages[i]="";var el=$("ea"+i),t=new Date();t.setHours(0,0,0,0);if(v){var b=new Date(v+"T00:00:00"),y=t.getFullYear(),bd=new Date(y,b.getMonth(),b.getDate()),dn=y-b.getFullYear()-(bd>t?1:0);if(b>t||dn>110||isNaN(dn)){el.textContent="Fecha no válida"}else{var nb=bd>t?bd:new Date(y+1,b.getMonth(),b.getDate()),lim=new Date(t);lim.setMonth(lim.getMonth()+6);S.ages[i]=dn+(nb<=lim?1:0);el.textContent="Edad de cálculo: "+S.ages[i]+" años"+(nb<=lim?" (cumples "+(dn+1)+" en menos de 6 meses)":"")}}else el.textContent="";upd()}
+var MODE="",BL=false;
+function pick(m){if($("vg").value=="f"&&!$("vf").value){$("ev").textContent="Elige la fecha de inicio.";return}$("ev").textContent="";MODE=m;if(m=="wa"){finish();return}$("choice").classList.add("hide");$("blk").classList.add("hide");$("lead").classList.remove("hide");$("lh").textContent={call:"📞 Agenda tu llamada",mail:"📄 Presupuesto oficial",look:"🎁 Tu cotización con 10% dto."}[m];rcg();var d=new Date();d.setDate(d.getDate()+1);$("cd").min=d.toISOString().slice(0,10);$("sb").textContent={call:"Solicitar llamada",mail:"Enviarme el presupuesto",look:"Quiero mi cotización con 10% dto."}[m];window.scrollTo({top:0,behavior:"smooth"})}
+function sendLead(){var m=$("em").value.trim(),nm=$("nm").value.trim(),tl=$("tl").value.trim(),er=$("e4"),ok=/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(m);if(MODE=="call"){if(!nm||tl.replace(/\D/g,"").length<9||!$("cd").value){er.textContent="Indica tu nombre, un teléfono válido y el día de la llamada.";return}if(m&&!ok){er.textContent="El correo no parece válido.";return}}else if(MODE=="mail"){var dn=$("dn").value.trim().toUpperCase().replace(/[\s-]/g,"");if(!nm){er.textContent="Indica tu nombre completo.";return}if(!/^([XYZ]\d{7}|\d{8})[A-Z]$/.test(dn)){er.textContent="Indica un DNI o NIE válido (ej. 12345678Z o X1234567L).";return}if($("rc").value=="c"&&!ok){er.textContent="Escribe un correo válido.";return}if($("rc").value=="w"&&(tl.replace(/\D/g,"").length<9||(m&&!ok))){er.textContent="Indica un teléfono de WhatsApp válido.";return}}else if(!ok){er.textContent="Escribe un correo válido.";return}if(!$("rg").checked){er.textContent="Necesitamos tu consentimiento para continuar.";return}er.textContent="";finish(m,nm,tl)}
+function finish(m,nm,tl){var c=calc(),d=c.t*(1-CFG.dto),v=vence(),E=encodeURIComponent;m=m||"";nm=nm||"";tl=tl||"";var T={call:"Solicita que le llamen",wa:"Quiere cerrar por WhatsApp",mail:"Solicita presupuesto oficial",look:"Quiere su cotización"};var cita=MODE=="call"?"\nLlamada: "+$("cd").value+" ("+$("ch").value+") al "+tl:"";
+var mk=function(BL){return"Cotización seguro de decesos ("+T[MODE]+")"+(nm?"\nNombre: "+nm:"")+cita+(MODE=="mail"?"\nDNI/NIE: "+$("dn").value.trim().toUpperCase()+"\nQuiere recibir el presupuesto por: "+($("rc").value=="w"?"WhatsApp":"correo electrónico"):"")+"\nMascotas: "+($("pt").checked?"le interesa (coste a confirmar)":"no")+"\nInicio de vigencia deseado: "+vig()+"\nAsegurados: "+S.n+" (edades actuariales: "+S.ages.join(", ")+")\n"+c.r.map(function(x){return"- "+x[0]+(BL?"":": "+eur(x[1]))}).join("\n")+(BL?"\nPrecio no mostrado (referencia del cliente: "+eur(curM())+"/mes)":"\nTotal aprox.: "+eur(c.t)+"/mes\nCon 10% dto. (válido hasta el "+v+"): "+eur(d)+"/mes")+(m?"\nCorreo: "+m:"")+"\n\nPerfil:\n"+pre()},txt=mk(BL);
+var FS=Promise.resolve(false);var ON=CFG.endpoint||CFG.email.indexOf("ejemplo")<0;if(ON){try{FS=fetch(CFG.endpoint||"https://formsubmit.co/ajax/"+CFG.email,{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({_subject:"Nueva solicitud de seguro de decesos"+(nm?" · "+nm:""),_captcha:"false",_template:"box",mode:MODE,name:nm,phone:tl,email:m,message:(BL?mk(false)+"\n⚠️ Precio NO mostrado al cliente (calculado internamente). Referencia del cliente: "+eur(curM())+"/mes":txt+"\nEstos son los precios que vio el cliente.")+"\nFechas de nacimiento: "+S.dob.join(", ")+"\nConsentimiento de datos: "+(MODE=="wa"?"no solicitado (contacto directo por WhatsApp)":"aceptado el "+new Date().toLocaleString("es-ES")),total:c.t,profile:pre()})}).then(function(r){return r.json().then(function(j){return r.ok&&String(j.success)=="true"},function(){return false})}).catch(function(){return false})}catch(e){}}
+$("choice").classList.add("hide");$("lead").classList.add("hide");$("blk").classList.add("hide");$("dp").classList.toggle("hide",BL);$("dq").classList.toggle("hide",BL);$("done").classList.remove("hide");$("dh").textContent={call:"¡Llamada solicitada!",wa:"¡Genial, cerremos por WhatsApp!",mail:"¡Casi listo! Tu presupuesto oficial",look:"¡Aquí tienes tu oferta!"}[MODE];$("old").textContent=eur(c.t);$("neo").textContent=eur(d);$("vd2").textContent=v;$("dv").textContent="Inicio de vigencia deseado: "+vig()+".";$("dm").textContent=MODE=="wa"?"Escríbenos y te ayudamos a cerrar la contratación.":MODE=="mail"?"Te enviaremos tu presupuesto oficial por "+($("rc").value=="w"?"WhatsApp":"correo electrónico")+" en 1 día hábil."+(ON?"":" Pulsa un botón para confirmar tu solicitud."):ON?"Hemos recibido tu solicitud.":"Pulsa uno de los botones para confirmar tu solicitud.";
+$("wa").href="https://wa.me/"+CFG.whatsapp+"?text="+E("¡Hola! Estoy interesado en continuar con mi seguro y quiero más información.");$("ml").href="mailto:"+(m?E(m):CFG.email)+"?"+(m?"cc="+E(CFG.email)+"&":"")+"subject="+E("Mi cotización de seguro de decesos")+"&body="+E(txt);$("ml").classList.toggle("hide",MODE=="wa");if(ON){var ml=$("ml"),mh=ml.href;ml.removeAttribute("href");ml.style.pointerEvents="none";ml.textContent="Enviando…";FS.then(function(ok){if(ok){ml.textContent="✓ Correo enviado"}else{ml.href=mh;ml.style.pointerEvents="";ml.textContent="No se pudo enviar · Enviar por correo"}})}window.scrollTo({top:0,behavior:"smooth"})}
+function band(a){return a<=16?0:a>=70?14:a>=67?a-67+11:Math.min(10,Math.floor((a-17)/5)+1)}
+$("sub").innerHTML=SUBS.map(function(v){return'<option value="'+v+'"'+(v==15?" selected":"")+'>'+v+' € al día</option>'}).join("");
+$("ac").innerHTML=ACCS.map(function(v){return'<option value="'+v+'"'+(v==20000?" selected":"")+'>'+v.toLocaleString("es-ES")+' €</option>'}).join("");
+var MS=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+function opts(a,sel,ph){return'<option value="">'+ph+'</option>'+a.map(function(x){return'<option value="'+x[0]+'"'+(x[0]==sel?" selected":"")+'>'+x[1]+'</option>'}).join("")}
+function dopts(p){var n=new Date(+p[0]||2000,+p[1]||1,0).getDate(),a=[];for(var d=1;d<=n;d++)a.push([d,d]);return opts(a,p[2],"Día")}
+function dm(i,el){var d=el.value.replace(/\D/g,"").slice(0,8),t=d.length>4?d.slice(0,2)+"/"+d.slice(2,4)+"/"+d.slice(4):d.length>2?d.slice(0,2)+"/"+d.slice(2):d,v="",ok=d.length==8;el.value=t;S.dp[i]=[t,"",""];if(ok){var dd=+d.slice(0,2),mm=+d.slice(2,4),yy=+d.slice(4),dt=new Date(yy,mm-1,dd);ok=yy>1900&&dt.getFullYear()==yy&&dt.getMonth()==mm-1&&dt.getDate()==dd;v=ok?yy+"-"+d.slice(2,4)+"-"+d.slice(0,2):""}if(d.length==8&&!ok){S.dob[i]="";S.ages[i]="";$("ea"+i).textContent="Fecha no válida";upd();return}setDob(i,v)}
+function drawAges(){$("n").textContent=S.n;$("ages").innerHTML=S.dp.map(function(p,i){return'<label>Fecha de nacimiento · persona '+(i+1)+'</label><input type="text" inputmode="numeric" autocomplete="off" maxlength="10" placeholder="DD/MM/AAAA" id="db'+i+'" value="'+(p[0]||"")+'" oninput="dm('+i+',this)"><div class="fine" id="ea'+i+'">'+(S.ages[i]===""?"":"Edad de cálculo: "+S.ages[i]+" años")+'</div>'}).join("")}
+function chg(d){var n=Math.max(1,Math.min(8,S.n+d));while(S.ages.length<n){S.ages.push("");S.dob.push("");S.dp.push(["","",""])}S.ages.length=S.dob.length=S.dp.length=n;S.n=n;drawAges();upd()}
+function tog(id,c){$(id).classList.toggle("on",c.checked);if(id=="oe"&&c.checked&&!$("h").checked){$("h").checked=true;$("oh").classList.add("on")}if(id=="oh"&&!c.checked){$("e").checked=false;$("oe").classList.remove("on")}upd()}
+function calc(){var cap=+$("cap").value,r=[],ok=S.ages.every(function(a){return a!==""&&a>=0&&a<=70});if(!ok)return null;
+var f=S.ages.reduce(function(s,a){return s+R[band(a)]*cap/1e4},0);r.push(["Seguro de decesos (servicio completo)",f]);
+r.push(["Gastos de póliza y servicios incluidos",2.31+0.88*S.n]);
+var el=S.ages.filter(function(a){return a<=64}).length,e60=S.ages.filter(function(a){return a<=60}).length,ad=S.ages.filter(function(a){return a>=14&&a<=64}).length,mn=S.ages.filter(function(a){return a<14}).length;
+if($("h").checked&&el)r.push(["Hospitalización "+$("sub").value+" €/día ("+el+" pers.)",el*$("sub").value/12]);
+if($("a").checked&&el){var ty=$("at").value,k=ty=="I"?el:ad,ap=0,cp=+$("ac").value/6e4;if(k>0)ap+=ACC[ty][Math.min(k,4)-1]*cp;if(ty=="MI"&&mn>0)ap+=ACC.I[Math.min(mn,4)-1]*cp;if(ap>0)r.push(["Accidentes ("+({MI:"muerte + invalidez",M:"solo muerte",I:"solo invalidez"})[ty]+") "+(+$("ac").value).toLocaleString("es-ES")+" €",ap])}
+if($("e").checked&&$("h").checked&&e60)r.push(["Asistencia Hospitalaria Avanzada",e60*9.04/12]);
+return{r:r,t:r.reduce(function(s,x){return s+x[1]},0),cap:cap}}
+function upd(){var c=calc();var cm=curM(),lo=c&&cm>0&&cm<c.t;$("fv").textContent=c?eur(c.t):"—";$("fx").style.display=S.step>=2&&S.step<4&&c&&!lo?"block":"none"}
+$("cap").oninput=upd;
+function go(s){if(s>1&&s<5){var bad=S.ages.some(function(a){return a===""||a<0||a>70});if(bad){$("e1").textContent="Indica una fecha de nacimiento válida (edad de 0 a 70 años) para cada persona.";s=1}else $("e1").textContent=""}
+if(s==3&&$("e").checked&&!$("h").checked)$("e").checked=false,$("oe").classList.remove("on");
+S.step=s;if(s==3)elig();for(var i=0;i<=5;i++)$("s"+i).classList.toggle("hide",i!=s);$("pb").style.width=(s%5)*25+"%";
+if(s==4){var c=calc(),cm=curM();BL=cm>0&&cm<c.t;$("vd").textContent=vence();$("choice").classList.toggle("hide",BL);$("blk").classList.toggle("hide",!BL);$("quote").classList.toggle("hide",BL);$("tl2").href="tel:+"+CFG.phone;$("mq").classList.toggle("hide",!$("pt").checked);$("vf").min=new Date().toISOString().slice(0,10);$("lead").classList.add("hide");$("done").classList.add("hide");$("tot").textContent=eur(c.t);var cx=$("cmp");cx.classList.toggle("hide",!(cm>0&&$("hs").value=="si"));if(cm>0)cx.textContent="Ahora pagas unos "+eur(cm)+" al mes. Con esta cotización pagarías unos "+eur(c.t)+(c.t<cm?": un ahorro aproximado de "+eur(cm-c.t)+" al mes.":" (diferencia aproximada de "+eur(c.t-cm)+" al mes).")+" Compara también las garantías incluidas en cada seguro.";$("det").innerHTML=c.r.map(function(x){return"<tr><td>"+x[0]+"</td><td>"+eur(x[1])+"</td></tr>"}).join("");
+var h=S.ages.some(function(a){return a>64});if(h&&$("h").checked)$("det").innerHTML+='<tr><td colspan="2" class="fine">Hospitalización y accidentes solo aplican hasta los 64 años (muerte por accidente desde los 14) y la Asistencia Hospitalaria Avanzada hasta los 60.</td></tr>'}
+upd();window.scrollTo({top:0,behavior:"smooth"})}
+drawAges();upd();
+</script></body></html>
